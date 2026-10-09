@@ -36,6 +36,29 @@ img{max-width:100%;height:auto}
 .project img{height:240px}
 .footer{background-repeat:no-repeat;background-size:cover;background-position:center 45%}
 @media(max-width:760px){.portrait{width:170px;height:170px}.project img{height:210px}}
+
+/* Refined contact section: direct routes, clear hierarchy, responsive balance */
+.contact{padding:clamp(58px,7vw,92px) 0;background:linear-gradient(135deg,#edf6ff 0%,#f7fbff 58%,#e5f3ff 100%)}
+.contactLayout{display:grid;grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr);gap:clamp(22px,4vw,54px);align-items:stretch;margin-top:28px}
+.contactIntro{position:relative;overflow:hidden;padding:clamp(26px,4vw,42px);border-radius:22px;background:linear-gradient(145deg,#071a30,#0b3151);color:#f5faff;box-shadow:0 20px 50px #08213b20}
+.contactIntro:after{content:"";position:absolute;width:220px;height:220px;border:1px solid #28baff25;border-radius:50%;right:-100px;bottom:-100px;box-shadow:0 0 0 28px #28baff08,0 0 0 58px #28baff06}
+.contactKicker{font-size:10px;letter-spacing:.2em;font-weight:900;color:#39c7ff}
+.contactIntro h3{font:700 clamp(25px,3vw,36px)/1.15 "Space Grotesk";letter-spacing:-.025em;margin:15px 0}
+.contactIntro>p{font-size:14px;line-height:1.85;color:#c4d5e7;max-width:420px}
+.contactNote{position:relative;z-index:1;display:flex;align-items:center;gap:13px;border-top:1px solid #ffffff24;margin-top:28px;padding-top:22px}
+.contactNoteIcon{width:40px;height:40px;flex:0 0 40px;display:grid;place-items:center;border:1px solid #2bbcff70;border-radius:12px;color:#49ccff;font-size:21px}
+.contactNote strong,.contactNote small{display:block}.contactNote strong{font-size:12px}.contactNote small{font-size:11px;line-height:1.6;color:#a9c2d8;margin-top:4px}
+.contactMethods{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.contactMethod{min-width:0;display:grid;grid-template-columns:42px minmax(0,1fr) 14px;align-items:center;gap:12px;padding:19px 16px;border-radius:16px;background:#fff;border:1px solid #d6e5f1;box-shadow:0 8px 24px #0a31500a;transition:transform .2s,border-color .2s,box-shadow .2s}
+.contactMethod:hover{transform:translateY(-3px);border-color:#58bff2;box-shadow:0 14px 28px #0a315014}
+.contactMethodIcon{width:40px;height:40px;display:grid;place-items:center;border-radius:12px;background:#e9f7ff;color:#087fb8;font-size:12px;font-weight:900}
+.contactMethodText{min-width:0}.contactMethodText small,.contactMethodText strong,.contactMethodText em{display:block}
+.contactMethodText small{font-size:8px;letter-spacing:.11em;color:#71859a;font-weight:800;margin-bottom:7px}
+.contactMethodText strong{font-size:13px;line-height:1.4;color:#09223a}
+.contactMethodText em{font-style:normal;font-size:10px;line-height:1.5;color:#667a8e;margin-top:4px;overflow-wrap:anywhere}
+.contactArrow{color:#079ddf;font-size:16px}
+@media(max-width:900px){.contactLayout{grid-template-columns:1fr}.contactIntro{min-height:0}.contactMethods{grid-template-columns:1fr 1fr}.connectMark{flex-basis:76px;width:76px;height:76px}}
+@media(max-width:560px){.contactMethods{grid-template-columns:1fr}.contactMethod{padding:17px 15px}.contactIntro{padding:25px 22px}.connectCta{align-items:flex-start;gap:12px}.connectMark{display:none}.connectButtons{gap:8px}.connectBtn{padding:11px 13px;font-size:11px}.footerGrid{grid-template-columns:1fr;gap:20px}.footerBrand{display:flex;width:100%;box-sizing:border-box}.footerLogo{width:145px}.footerLinks{justify-content:flex-start}.socials{justify-content:flex-start}.footerSocialHeading{margin:0;grid-column:auto}.copy{flex-direction:column;gap:8px}}
 </style>
 </head>
 <body>
@@ -107,13 +130,33 @@ img{max-width:100%;height:auto}
 <div class="cvGrid"><div class="cvCard"><h3>Education & Experience</h3><p><strong>Makerere University Jinja Campus</strong></p><p>National Certificate in Information Technology & Computer Maintenance · 2024–2026</p><p>Web development, computer maintenance, IT support, networking and digital solutions.</p></div><div class="cvCard"><h3>Technical Toolkit</h3><div class="cvList"><div>HTML / CSS</div><div>JavaScript</div><div>WordPress</div><div>GitHub</div><div>IT Support</div><div>Computer Maintenance</div><div>Networking</div><div>Data Entry</div><div>Digital Design</div><div>Forex Technology</div></div></div></div>
 </div></section>
 
-<section class="section contact" id="contact"><div class="wrap"><div class="sectionHead"><div><div class="eyebrow2">CONTACT</div><h2>Let's Work Together</h2><p class="desc">Have a project, digital task or technical problem? Get in touch and let's discuss a practical solution.</p></div></div><div class="contactGrid"><div class="contactCard"><small>WHATSAPP / PHONE</small><b><a href="https://wa.me/256781372439" target="_blank" rel="noopener noreferrer">+256 781 372 439</a></b></div><div class="contactCard"><small>EMAIL</small><b><a href="mailto:davidmwesigwa71@gmail.com">davidmwesigwa71@gmail.com</a></b></div><div class="contactCard"><small>GITHUB</small><b><a href="https://github.com/Codeme256" target="_blank" rel="noopener noreferrer">github.com/Codeme256</a></b></div></div></div></section>
+<section class="section contact" id="contact">
+<div class="wrap">
+  <div class="sectionHead">
+    <div><div class="eyebrow2">CONTACT</div><h2>Let’s Build Something Useful</h2><p class="desc">Have a project, a digital idea or a technical challenge? Share what you’re working on and let’s find the right next step.</p></div>
+  </div>
+  <div class="contactLayout">
+    <div class="contactIntro">
+      <div class="contactKicker">START A CONVERSATION</div>
+      <h3>Good work starts with a simple hello.</h3>
+      <p>I’m available for website development, digital design, IT support, computer maintenance and technology-focused collaborations.</p>
+      <div class="contactNote"><span class="contactNoteIcon">↗</span><span><strong>Clear communication. Practical solutions.</strong><small>Tell me your goal, timeline and what you need help with.</small></span></div>
+    </div>
+    <div class="contactMethods">
+      <a class="contactMethod" href="https://wa.me/256781372439" target="_blank" rel="noopener noreferrer"><span class="contactMethodIcon">WA</span><span class="contactMethodText"><small>QUICKEST WAY TO REACH ME</small><strong>Chat on WhatsApp</strong><em>+256 781 372 439</em></span><span class="contactArrow">↗</span></a>
+      <a class="contactMethod" href="mailto:davidmwesigwa71@gmail.com"><span class="contactMethodIcon">✉</span><span class="contactMethodText"><small>PROJECTS & ENQUIRIES</small><strong>Send me an email</strong><em>davidmwesigwa71@gmail.com</em></span><span class="contactArrow">↗</span></a>
+      <a class="contactMethod" href="https://github.com/Codeme256" target="_blank" rel="noopener noreferrer"><span class="contactMethodIcon">GH</span><span class="contactMethodText"><small>CODE & PROJECTS</small><strong>Explore my GitHub</strong><em>github.com/Codeme256</em></span><span class="contactArrow">↗</span></a>
+      <a class="contactMethod" href="https://www.linkedin.com/in/mwesigwa-david-05010a355/" target="_blank" rel="noopener noreferrer"><span class="contactMethodIcon">in</span><span class="contactMethodText"><small>PROFESSIONAL NETWORK</small><strong>Connect on LinkedIn</strong><em>View my professional profile</em></span><span class="contactArrow">↗</span></a>
+    </div>
+  </div>
+</div>
+</section>
 </main>
 
 <footer class="footer">
 <div class="wrap">
 <section class="connectCta" aria-labelledby="connect-title">
-<div class="connectCopy"><div class="connectEyebrow">HAVE A PROJECT IN MIND?</div><h2 id="connect-title">Let's Talk. Let's Connect.</h2><p>Whether you need a website, digital support, IT help or want to collaborate, I’m just one message away. Let’s turn your idea into something useful.</p><div class="connectButtons"><a class="connectBtn main" href="https://wa.me/256781372439" target="_blank" rel="noopener noreferrer">✆ Chat on WhatsApp</a><a class="connectBtn alt" href="mailto:davidmwesigwa71@gmail.com">✉ Send an Email</a><a class="connectBtn alt" href="https://x.com/jacedavid2" target="_blank" rel="noopener noreferrer">𝕏 Follow on X</a><a class="connectBtn alt" href="https://www.instagram.com/jace_david246/" target="_blank" rel="noopener noreferrer">◎ Instagram</a></div></div><div class="connectMark" aria-hidden="true">↗</div>
+<div class="connectCopy"><div class="connectEyebrow">YOUR NEXT IDEA STARTS HERE</div><h2 id="connect-title">Let’s Talk. Let’s Connect.</h2><p>Ready to get started? Reach out directly and let’s discuss how I can help.</p><div class="connectButtons"><a class="connectBtn main" href="https://wa.me/256781372439" target="_blank" rel="noopener noreferrer">✆ Chat on WhatsApp</a><a class="connectBtn alt" href="mailto:davidmwesigwa71@gmail.com">✉ Send an Email</a><a class="connectBtn alt" href="#contact">View Contact Details ↗</a></div></div><div class="connectMark" aria-hidden="true">↗</div>
 </section>
 <div class="footerGrid">
 <div><div class="footerBrand"><img class="footerLogo" src="./apex-digital-space-logo-new.svg" alt="Apex Digital Space"><div class="footerBrandText">APEX DIGITAL SPACE<small>WEB | IT | FOREX | DIGITAL SOLUTIONS</small></div></div></div>
